@@ -1,0 +1,529 @@
+/* --- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+      Xlight: 200i
+      Light:300
+      Default: 400
+      Semi-Bold: 600
+
+- Letter spacing
+      1px
+
+--- 02 COLORS
+      Page: #277da1; #f9c74f; #f8dec9;
+      Buttons: #f3722c; #1bbd59; #fa2529;
+      Text: #2b2d42;
+
+--- 05 SHADOWS
+
+      0.1rem 0.5rem 0.9rem 0.2rem rgba(0, 0, 0, 0.56);
+
+--- 06 BORDER-RADIUS
+
+      Default: 5px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* ************************************************************** */
+/* GENERAL */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgcol: #277da1;
+  --txtcol: #2b2d42;
+  --mainbtnbgcol: #f3722c;
+  --sectioncol: #f9c74f;
+  --fieldbgcol: #f8dec9;
+  --okbtncol: #1bbd59;
+  --delbtncol: #fa3d40;
+  --fontMali: "Mali", cursive, sans-serif;
+  --fontRoboto: "Roboto", sans-serif;
+  /* --fontfam3: ; */
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--fontRoboto);
+}
+
+body {
+  background-color: var(--bgcol);
+  position: relative;
+}
+
+.blur-active {
+  filter: blur(0.8rem);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--txtcol);
+}
+
+.input,
+.input:focus,
+.textarea,
+.textarea:focus {
+  outline: none;
+  padding-left: 0.2rem;
+  font-family: var(--fontRoboto);
+  font-size: 2rem;
+  background-color: var(--fieldbgcol);
+}
+
+.btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: whitesmoke;
+  cursor: pointer;
+  font-family: var(--fontMali);
+}
+
+.btn:hover,
+.slide-btn:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
+.btn:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0 0);
+}
+
+.field-area {
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--txtcol);
+}
+
+/* END OF GENERAL */
+
+/* ************************************************************** */
+
+/* MAIN SECTION */
+
+/* GOALS COLUMN */
+
+.main-section {
+  background-color: var(--sectioncol);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: 2rem;
+  row-gap: 6rem;
+  margin: 2rem;
+  box-shadow: 0.1rem 0.5rem 0.9rem 0.2rem rgba(0, 0, 0, 0.56);
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  height: auto;
+}
+
+.goals-container {
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.goal {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.input {
+  width: 100%;
+  height: 3rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  gap: 3rem;
+  padding: 0.5rem 0;
+}
+
+.tutorial {
+  background-color: #277da1;
+}
+
+.add,
+.create-list {
+  background-color: var(--mainbtnbgcol);
+}
+
+.remove-completed {
+  background-color: var(--okbtncol);
+}
+
+.clear-list {
+  margin-top: 5rem;
+  background-color: var(--delbtncol);
+}
+
+/* END OF GOALS COLUMN */
+
+/* **************************************************************** */
+
+/* TEXTAREA COLUMN */
+
+/* .generate-list-container {
+  border: 1px red solid;
+} */
+
+.full-list {
+  display: inline-flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding-top: 0.5rem;
+}
+
+/* END OF TEXTAREA COLUMN */
+
+/* ******************************************************************* */
+
+/* TIMER COLUMN */
+
+.timer-container {
+  gap: 1rem;
+}
+
+.alarm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-alarm {
+  color: var(--mainbtnbgcol);
+  cursor: pointer;
+}
+
+.timer {
+  width: auto;
+  height: 100%;
+  background: var(--fieldbgcol);
+  font-family: "Share Tech Mono", monospace;
+  color: var(--txtcol);
+}
+
+.date {
+  padding-left: 1rem;
+  border-bottom: 0.1rem solid var(--txtcol);
+}
+
+.digits-container {
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4vw;
+  font-family: "Share Tech Mono", monospace;
+  padding: 1rem;
+  border-bottom: 0.1rem solid var(--txtcol);
+}
+
+.digits {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.daytime {
+  padding: 0 0 0 2rem;
+}
+.days {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  color: rgba(69, 38, 10, 0.13);
+}
+
+.current {
+  color: var(--txtcol);
+}
+
+/* .hours,
+.mins,
+.secs {
+} */
+
+/* END OF TIMER COLUMN */
+
+/* ******************************************************************* */
+
+/* LIST */
+
+.goals-list-container {
+  padding: 3.2rem 4.8rem;
+  margin-top: 2rem;
+  margin-left: 4.8rem;
+  grid-column: span 3;
+  width: 70%;
+}
+
+.goals-list {
+  list-style-type: none;
+  width: auto;
+}
+
+li {
+  margin-bottom: 1.6rem;
+  padding: 0.5rem 2.4rem;
+  color: var(--txtcol);
+  font-size: 4rem;
+  font-weight: 600;
+  /* background-color: white; */
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--txtcol);
+  cursor: pointer;
+}
+
+li .pending {
+  background-image: linear-gradient(rgb(158, 3, 3, 0.2) 0 0);
+}
+
+li .completed {
+  /* background-image: linear-gradient(rgba(5, 121, 11, 0.2) 0 0); */
+  background-color: var(--okbtncol);
+}
+
+.icons-unfinished {
+  transform: scale(0.8);
+  margin-right: 3.2rem;
+  padding-bottom: 0;
+  /* color: #9e0303; */
+  color: var(--delbtncol);
+}
+
+.icons-finished {
+  transform: scale(0.8);
+  margin-right: 3.2rem;
+  padding-bottom: 0;
+  /* color: #419e03; */
+  color: var(--okbtncol);
+}
+
+.icon-alarm:hover {
+  color: #d46123;
+}
+.icon-alarm:active {
+  color: #6b360a;
+}
+
+/* END OF LIST */
+
+/* **************************************************************** */
+
+/* MODAL */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  background-color: var(--fieldbgcol);
+  color: var(--txtcol);
+  border: 0.1rem solid var(--txtcol);
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 0 100rem rgba(0, 0, 0, 0.6);
+  padding: 2rem 2rem;
+  font-size: 4rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.exit-modal {
+  background-color: var(--delbtncol);
+  margin: 0 1.5rem;
+}
+
+#fifth {
+  background-color: var(--okbtncol);
+}
+
+/* END OF MODAL */
+
+/* **************************************************************** */
+
+/* TUTORIAL MODAL */
+
+.close-tutorial {
+  padding-bottom: 1rem;
+  /* margin-right: 2rem; */
+  text-align: end;
+  cursor: pointer;
+}
+
+.tut-icon {
+  cursor: pointer;
+}
+
+.modal-tutorial {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  background-color: var(--fieldbgcol);
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.progress-btns {
+  text-align: center;
+  cursor: pointer;
+}
+
+.slide-btn {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--sectioncol);
+}
+
+.slide-btn:active {
+  background-color: var(--txtcol);
+}
+
+.slide-btn-active {
+  background-color: var(--txtcol);
+}
+
+/* .active-image {
+  height: fill;
+  width: auto;
+} */
+
+/* END OF TUTORIAL MODAL */
+
+/* **************************************************************** */
+
+/* WATCH SETTINGS MODAL */
+
+.timer-settings {
+  padding: 2rem;
+}
+
+.close-timer-settings {
+  display: inline-block;
+  cursor: pointer;
+  text-align: end;
+  padding: 1.5rem 0;
+}
+
+.timer-type-container {
+  padding: 1.5rem 0;
+}
+
+.watch-settings {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 3.2rem;
+}
+
+.btns-timer-settings {
+  text-align: center;
+}
+
+.btn-stopwatch {
+  margin: 0 2rem;
+  background-color: var(--bgcol);
+}
+
+.btn-countdown {
+  margin-right: 3rem;
+  background-color: var(--mainbtnbgcol);
+}
+
+.set-countdown > * {
+  font-size: 2rem;
+}
+
+.stopwatch-input-container {
+  display: flex;
+  padding: 4rem 0 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.set-h,
+.set-min,
+.set-sec {
+  border: 0.1rem solid var(--txtcol);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.2rem 0.2rem 0.4rem;
+  background-color: rgb(252, 244, 229);
+}
+
+.set-h:focus,
+.set-min:focus,
+.set-sec:focus {
+  outline: none;
+}
+
+.start-timer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.start-timer {
+  margin-top: 2rem;
+  padding: 1.5rem 4rem;
+  background-color: var(--okbtncol);
+}
+
+.btn-stopwatch {
+  /* padding: 5rem 2rem; */
+  margin: 2rem 0;
+}
+
+.btn-start,
+.btn-start-countdown {
+  background-color: var(--okbtncol);
+}
+
+.btn-end,
+.btn-end-countdown {
+  background-color: var(--delbtncol);
+}
+/* END OF WATCH SETTINGS MODAL */

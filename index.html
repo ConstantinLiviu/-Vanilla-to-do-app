@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla to do</title>
+    <script
+      src="https://kit.fontawesome.com/fa3ca320ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;600&family=Share+Tech+Mono&display=swap&family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="goals-container flex-column">
+        <div class="goal">
+          <p class="title">Set a goal</p>
+          <button class="add btn">Add goal</button>
+        </div>
+        <input type="text" class="input field-area" />
+        <div class="btns">
+          <button class="tutorial btn">How it works</button>
+          <button class="remove-completed btn">Clear achieved</button>
+        </div>
+        <button class="clear-list btn">Clear list</button>
+      </div>
+      <div class="generate-list-container flex-column">
+        <div class="full-list">
+          <p class="title">Bulk planning</p>
+          <button class="btn create-list">Create list</button>
+        </div>
+        <textarea class="textarea field-area"></textarea>
+      </div>
+      <div class="timer-container flex-column">
+        <div class="alarm">
+          <p class="title">Track your progress</p>
+          <i class="fas fa-stopwatch fa-2x icons icon-alarm"></i>
+        </div>
+        <div class="timer field-area flex-column">
+          <div class="date">
+            <span class="month"></span>/<span class="domo"></span>
+          </div>
+          <div class="digits-container">
+            <div class="hours digits"></div>
+            <div class="dividers">:</div>
+            <div class="mins digits"></div>
+            <div class="dividers">:</div>
+            <div class="secs digits"></div>
+            <div class="daytime"></div>
+          </div>
+          <div class="days">
+            <div class="day">SUN</div>
+            <div class="day">MON</div>
+            <div class="day">TUE</div>
+            <div class="day">WED</div>
+            <div class="day">THU</div>
+            <div class="day">FRI</div>
+            <div class="day">SAT</div>
+          </div>
+        </div>
+      </div>
+      <div class="goals-list-container">
+        <ul class="goals-list"></ul>
+      </div>
+    </section>
+    <!-- To do: -->
+    <!-- <section class="timer"></section> -->
+    <section class="modal flex-column hidden">
+      <div class="clear-confirmation flex-column">
+        <div class="modal-header">
+          <p class="modal-rock">You rock!</p>
+          <button class="btn exit-modal hidden" id="fifth">
+            Out with the old, in with the new
+          </button>
+          <button class="btn exit-modal" id="fourth">
+            Obvious exit button is obvious
+          </button>
+        </div>
+        <p class="modal-msg">
+          You managed to achieve every single goal! Eat a cookie and be proud!
+          And while you're at it, why not set up new goals?
+        </p>
+      </div>
+    </section>
+
+    <section class="modal modal-tutorial flex-column hidden">
+      <i class="fa-solid fa-circle-xmark fa-1x close-tutorial"></i>
+      <div class="carousel-container">
+        <i class="fa-solid fa-circle-chevron-left fa-1x tut-icon"></i>
+        <div class="tutorial-img">
+          <img class="active-image" src="" alt="tutorial slide" />
+        </div>
+        <i class="fa-solid fa-circle-chevron-right fa-1x tut-icon"></i>
+      </div>
+      <div class="progress-btns">
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+        <button class="slide-btn"></button>
+      </div>
+    </section>
+
+    <section class="modal timer-settings flex-column hidden">
+      <i class="fa-solid fa-circle-xmark fa-xs close-timer-settings"></i>
+      <div class="timer-type-container">
+        <div class="flex-column">
+          <p class="watch-settings">Choose the timer setting</p>
+          <div class="btns-timer-settings">
+            <button class="btn btn-stopwatch">Stopwatch</button>
+            <button class="btn btn-countdown">Countdown</button>
+          </div>
+        </div>
+        <div class="set-countdown hidden">
+          <div class="flex-column">
+            <div class="stopwatch-input-container">
+              <div>
+                <p>Set hours</p>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  min="0"
+                  minlength="1"
+                  maxlength="2"
+                  class="set-h"
+                />
+              </div>
+              <div>
+                <p>Set minutes</p>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  min="0"
+                  max="59"
+                  minlength="1"
+                  maxlength="2"
+                  class="set-min"
+                />
+              </div>
+              <div>
+                <p>Set seconds</p>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  min="0"
+                  max="59"
+                  minlength="1"
+                  maxlength="2"
+                  class="set-sec"
+                />
+              </div>
+            </div>
+            <div class="start-timer-container">
+              <button class="btn start-timer">Go!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

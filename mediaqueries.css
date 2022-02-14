@@ -1,0 +1,193 @@
+:root {
+  --bgcol: #277da1;
+  --txtcol: #2b2d42;
+  --mainbtnbgcol: #f3722c;
+  --sectioncol: #f9c74f;
+  --fieldbgcol: #f8dec9;
+  --okbtncol: #1bbd59;
+  --delbtncol: #fa3d40;
+  --fontMali: "Mali", cursive, sans-serif;
+  --fontRoboto: "Roboto", sans-serif;
+  /* --fontfam3: ; */
+}
+
+@media (max-width: 600px) {
+  /* MAIN SECTION ADJUSTMENTS */
+  .main-section {
+    background-color: var(--sectioncol);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 1rem;
+    box-shadow: 0.1rem 0.5rem 0.9rem 0.2rem rgba(0, 0, 0, 0.56);
+    font-size: 1.3rem;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    height: auto;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+  .tutorial {
+    margin-right: 7.2rem;
+    padding: 0 2rem;
+  }
+
+  .goals-container,
+  .generate-list-container,
+  .timer-container {
+    padding-bottom: 4rem;
+    border-bottom: 0.1rem solid var(--mainbtnbgcol);
+  }
+
+  .textarea,
+  .textarea:focus {
+    font-size: 1.4rem;
+    height: 20vh;
+  }
+
+  .create-list {
+    padding: 1rem 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .icon-alarm {
+    font-size: 4rem;
+  }
+
+  .timer {
+    font-size: 1.6rem;
+  }
+
+  .digits-container {
+    font-size: 8vw;
+  }
+  /* END OF MAIN SECTION ADJUSTMENTS */
+
+  /* GOALS LIST */
+
+  .goals-list-container {
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  li {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem 0.5rem;
+    color: var(--txtcol);
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--txtcol);
+    cursor: pointer;
+  }
+
+  .icons-finished,
+  .icons-unfinished {
+    margin-right: 0.5rem;
+    font-size: 1.9rem;
+  }
+
+  /* TIMER ADJUSTMENTS */
+  .btn-stopwatch {
+    margin: 1rem 0;
+  }
+
+  .close-tutorial {
+    padding-bottom: 0;
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .btns-timer-settings {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .btn-countdown {
+    margin-right: 0;
+  }
+
+  .timer-type-container {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+  }
+
+  .stopwatch-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* MODAL */
+
+  .modal {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    background-color: var(--fieldbgcol);
+    color: var(--txtcol);
+    border: 0.1rem solid var(--txtcol);
+    border-radius: 0.5rem;
+    box-shadow: 0 3rem 0 100rem rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    padding: 1rem 1rem;
+  }
+
+  .carousel-container {
+    margin: 0rem;
+    padding: 0rem;
+  }
+
+  .slide-btn {
+    cursor: pointer;
+    margin-right: 0.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--sectioncol);
+  }
+
+  .slide-btn:active {
+    background-color: var(--txtcol);
+  }
+
+  .slide-btn-active {
+    background-color: var(--txtcol);
+  }
+
+  .active-image {
+    width: 72vw;
+    height: auto;
+  }
+
+  .exit-modal {
+    margin: 2rem 2rem;
+    padding: 0;
+  }
+
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .clear-confirmation {
+    width: 75vw;
+  }
+}
