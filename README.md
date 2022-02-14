@@ -9,4 +9,11 @@ This is my very first attempt at a "complex" project. The base idea was a classi
 3. Users have the ability to clear the entire list or the task that they mark as achieved.
 4. There is also a functioning digital clock, the entire container serving as watch, timer and stopwatch. The "How it works" button provides a tutorial for all available features.
 
-The project is responsive, however, as this is a training project it was only "disigned" to be responsive on 1920x1080 + max-width: 600px (average mobile device). The mobile version was not fully optimized but it is fully functional.
+
+I plan on expanding on this project in the future. I want to:
+  - add the ability to save/load lists so that they can get reused;
+  - create a task settings menu that pops-up when a list item is clicked;
+  - add the ability to edit list entries;
+  - add the ability to schedule tasks and add the timer/coundown as part of the task settings;
+
+The project is responsive, however, as this is a training project it was only "disigned" to be responsive on 1920x1080 + max-width: 600px (average mobile device). The mobile version was not fully optimized but it is fully functional. As I am not a designer, I didn't focus very much on the visuals; I chose a premade color pallete and did my best to make it not look sucky.
